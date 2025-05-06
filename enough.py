@@ -33,17 +33,17 @@ while 1:
         menu = int(menu) 
     except ValueError:
         system("cls||clear")
-        print(Fore.LIGHTRED_EX + "Hatalı giriş yaptın. Tekrar deneyiniz.")
+        print(Fore.LIGHTRED_EX + "Hatalı sikiş yaptın. Tekrar dene yoksa penci zorno.")
         sleep(3)
         continue
     if menu == 1:
         system("cls||clear")
-        print(Fore.LIGHTYELLOW_EX + "Telefon numarasını başında '+90' olmadan yazınız (Birden çoksa 'enter' tuşuna basınız): "+ Fore.LIGHTGREEN_EX, end="")
+        print(Fore.LIGHTYELLOW_EX + "Telefon numarasını başında '+90' olmadan yaz yoksa ölürsün (Birden çoksa 'enter' tuşuna bas œ): "+ Fore.LIGHTGREEN_EX, end="")
         tel_no = input()
         tel_liste = []
         if tel_no == "":
             system("cls||clear")
-            print(Fore.LIGHTYELLOW_EX + "Telefon numaralarının kayıtlı olduğu dosyanın dizinini yazınız: "+ Fore.LIGHTGREEN_EX, end="")
+            print(Fore.LIGHTYELLOW_EX + "Telefon numaralarının kayıtlı olduğu dosyanın dizini yaz orospu: "+ Fore.LIGHTGREEN_EX, end="")
             dizin = input()
             try:
                 with open(dizin, "r", encoding="utf-8") as f:
@@ -53,7 +53,7 @@ while 1:
                 sonsuz = ""
             except FileNotFoundError:
                 system("cls||clear")
-                print(Fore.LIGHTRED_EX + "Hatalı dosya dizini. Tekrar deneyiniz.")
+                print(Fore.LIGHTRED_EX + "Hatalı dosya dizini. Doğru düzgün yazsana oç.")
                 sleep(3)
                 continue
         else:
@@ -62,15 +62,15 @@ while 1:
                 if len(tel_no) != 10:
                     raise ValueError
                 tel_liste.append(tel_no)
-                sonsuz = "(Sonsuz ise 'enter' tuşuna basınız)"  
+                sonsuz = "(Sonsuz ise 'enter' tuşuna bas amk cocu)"  
             except ValueError:
                 system("cls||clear")
-                print(Fore.LIGHTRED_EX + "Hatalı telefon numarası. Tekrar deneyiniz.") 
+                print(Fore.LIGHTRED_EX + "Hatalı telefon numarası. sikcem seni artık.") 
                 sleep(3)
                 continue
         system("cls||clear")
         try:
-            print(Fore.LIGHTYELLOW_EX + "Mail adresi (Bilmiyorsanız 'enter' tuşuna basın): "+ Fore.LIGHTGREEN_EX, end="")
+            print(Fore.LIGHTYELLOW_EX + "Mail adresini yaz aşağa (Bilmiyorsan 'enter'e tuşuna bas gopak): "+ Fore.LIGHTGREEN_EX, end="")
             mail = input()
             if ("@" not in mail or ".com" not in mail) and mail != "":
                 raise
